@@ -4,27 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Switchipede Games | Gaming Content Creator</title>
+    <!-- Critical CSS for visibility - Inline to prevent FOUC -->
+    <style>
+        .preload-hide { opacity: 0; }
+        .preload-show { opacity: 1; transition: opacity 0.5s; }
+        [data-aos] { opacity: 1 !important; transform: none !important; }
+        /* Force content visibility immediately */
+        body { opacity: 1 !important; }
+    </style>
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <!-- AOS Animation Library -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader">
-            <img src="assets/images/logo-transparent.png" alt="Switchipede Games Logo">
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-        </div>
-    </div>
-    
+<body class="content-visible">
     <!-- Navbar -->
     <header>
         <nav class="navbar">
@@ -72,12 +70,12 @@
 
     <!-- Featured Videos Section -->
     <section id="videos" class="videos-section">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>Featured <span>Videos</span></h2>
             <p>Check out my latest gaming content</p>
         </div>
         <div class="featured-videos">
-            <div class="video-card featured" data-aos="fade-up">
+            <div class="video-card featured">
                 <div class="video-thumbnail">
                     <div class="play-button">
                         <i class="fas fa-play"></i>
@@ -96,7 +94,7 @@
             </div>
             <div class="video-grid">
                 <!-- Video 1 -->
-                <div class="video-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="video-card">
                     <div class="video-thumbnail">
                         <div class="play-button">
                             <i class="fas fa-play"></i>
@@ -110,7 +108,7 @@
                     </div>
                 </div>
                 <!-- Video 2 -->
-                <div class="video-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="video-card">
                     <div class="video-thumbnail">
                         <div class="play-button">
                             <i class="fas fa-play"></i>
@@ -124,7 +122,7 @@
                     </div>
                 </div>
                 <!-- Video 3 -->
-                <div class="video-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="video-card">
                     <div class="video-thumbnail">
                         <div class="play-button">
                             <i class="fas fa-play"></i>
@@ -138,7 +136,7 @@
                     </div>
                 </div>
                 <!-- Video 4 -->
-                <div class="video-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="video-card">
                     <div class="video-thumbnail">
                         <div class="play-button">
                             <i class="fas fa-play"></i>
@@ -153,39 +151,39 @@
                 </div>
             </div>
         </div>
-        <div class="section-footer" data-aos="fade-up">
+        <div class="section-footer">
             <a href="https://www.youtube.com/@switchipedegames" target="_blank" class="btn primary-btn animated-btn"><i class="fas fa-video"></i> View All Videos</a>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about-section">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>About <span>Me</span></h2>
             <p>Get to know the person behind Switchipede Games</p>
         </div>
         <div class="about-content">
-            <div class="about-image" data-aos="fade-right">
+            <div class="about-image">
                 <div class="image-frame animated-border">
                     <img src="assets/images/profile-pic.jpg" alt="Mohamed Elsharidy">
                 </div>
             </div>
-            <div class="about-text" data-aos="fade-left">
+            <div class="about-text">
                 <h3 class="glitch-effect" data-text="Mohamed Elsharidy">Mohamed Elsharidy</h3>
                 <p class="subtitle">Game Developer, Cybersecurity Director & YouTube Content Creator</p>
                 <p>Hey there! I'm Mohamed, the face behind Switchipede Games. Based in Queens, New York, I create gaming content focused on fighting games, action adventures, and RPGs.</p>
                 <p>With over <span class="highlight">7.92K subscribers</span> and growing, I specialize in full game walkthroughs, story mode playthroughs, and online ranked matches.</p>
                 <p>When I'm not creating content, I work as a Cybersecurity Director and Game Developer, bringing my technical expertise to both my professional career and my gaming content.</p>
                 <div class="stats">
-                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-item">
                         <span class="number">7.92K+</span>
                         <span class="label">Subscribers</span>
                     </div>
-                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-item">
                         <span class="number">50+</span>
                         <span class="label">Videos</span>
                     </div>
-                    <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-item">
                         <span class="number">100K+</span>
                         <span class="label">Total Views</span>
                     </div>
@@ -203,12 +201,12 @@
 
     <!-- Games Showcase Section -->
     <section id="games" class="games-section">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>Featured <span>Games</span></h2>
             <p>Games I love to play and share with you</p>
         </div>
         <div class="games-grid">
-            <div class="game-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="game-card">
                 <div class="game-image">
                     <img src="assets/images/dbz.jpg" alt="Dragon Ball Sparking Zero">
                 </div>
@@ -218,7 +216,7 @@
                     <a href="https://www.youtube.com/results?search_query=switchipede+games+dragon+ball+sparking+zero" target="_blank" class="btn small-btn"><i class="fas fa-play-circle"></i> Watch Series</a>
                 </div>
             </div>
-            <div class="game-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="game-card">
                 <div class="game-image">
                     <img src="assets/images/sf6.jpg" alt="Street Fighter 6">
                 </div>
@@ -228,7 +226,7 @@
                     <a href="https://www.youtube.com/results?search_query=switchipede+games+street+fighter+6" target="_blank" class="btn small-btn"><i class="fas fa-play-circle"></i> Watch Series</a>
                 </div>
             </div>
-            <div class="game-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="game-card">
                 <div class="game-image">
                     <img src="assets/images/re4.jpg" alt="Resident Evil 4 Remake">
                 </div>
@@ -238,7 +236,7 @@
                     <a href="https://www.youtube.com/results?search_query=switchipede+games+resident+evil+4+remake" target="_blank" class="btn small-btn"><i class="fas fa-play-circle"></i> Watch Series</a>
                 </div>
             </div>
-            <div class="game-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="game-card">
                 <div class="game-image">
                     <img src="assets/images/tmnt.jpg" alt="TMNT: Mutant Unleashed">
                 </div>
@@ -253,12 +251,12 @@
 
     <!-- Newsletter/Contact Section -->
     <section id="contact" class="contact-section">
-        <div class="section-header" data-aos="fade-up">
+        <div class="section-header">
             <h2>Get In <span>Touch</span></h2>
             <p>Connect with me or leave a message</p>
         </div>
         <div class="contact-container">
-            <div class="contact-form" data-aos="fade-right">
+            <div class="contact-form">
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -279,23 +277,23 @@
                     <button type="submit" class="btn primary-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
                 </form>
             </div>
-            <div class="contact-info" data-aos="fade-left">
-                <div class="info-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="contact-info">
+                <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <h3>Email</h3>
                     <p>switchipedegames@gmail.com</p>
                 </div>
-                <div class="info-item" data-aos="zoom-in" data-aos-delay="200">
+                <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3>Location</h3>
                     <p>Queens, New York</p>
                 </div>
-                <div class="info-item" data-aos="zoom-in" data-aos-delay="300">
+                <div class="info-item">
                     <i class="fab fa-youtube"></i>
                     <h3>YouTube</h3>
                     <p>youtube.com/@switchipedegames</p>
                 </div>
-                <div class="subscribe-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="subscribe-card">
                     <div class="subscribe-content">
                         <h3>Subscribe to My Channel</h3>
                         <p>Don't miss out on my latest gaming videos!</p>
@@ -349,13 +347,23 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // Initialize AOS animation library
+        // Initialize AOS animation library with zero duration for initial load
         document.addEventListener('DOMContentLoaded', function() {
+            // Set initial content visibility (prevents FOUC)
+            document.body.classList.add('content-visible');
+            
+            // Initialize AOS with minimal settings
             AOS.init({
-                duration: 800,
-                easing: 'ease',
+                duration: 0, // No animation duration initially
                 once: true,
-                offset: 100
+                disable: true // Disable animations completely
+            });
+            
+            // Force all AOS elements to be visible
+            document.querySelectorAll('[data-aos]').forEach(function(el) {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+                el.style.visibility = 'visible';
             });
         });
     </script>
